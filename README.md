@@ -17,6 +17,3 @@ so it only have highlight on following syntax:
 3. Comment
 4. Constant
 
-## Background color
-
-This theme doesn't ship a background color, to make it looks more coordinated in terminal.
