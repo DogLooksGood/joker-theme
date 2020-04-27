@@ -35,7 +35,7 @@
 
 (custom-theme-set-faces
  'joker
- '(default                        ((t (:background "#211F23"  :foreground "#A8A8A8"))))
+ '(default                        ((t (:background "#212121"  :foreground "#A8A8A8"))))
  '(mc/cursor-face                 ((t (:background "#949494" :foreground "black"))))
  '(region                         ((t (:background "#174535"))))
  '(highlight-symbol-face          ((t ())))
@@ -120,7 +120,7 @@
  '(smerge-lower                   ((t (:background "#173017"))))
  '(telega-msg-heading             ((t (:inherit hl-line))))
  '(telega-unmuted-count           ((t (:inherit font-lock-function-name-face))))
- '(rime-preedit-face              ((t (:inverse-video t))))
+ '(rime-preedit-face              ((t (:inverse-video nil :underline t))))
  '(rime-cursor-face               ((t (:inherit font-lock-constant-face))))
  '(rime-indicator-face            ((t (:foreground "#9256B4"))))
  '(tooltip                        ((t (:family "unifont"))))
