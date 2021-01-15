@@ -1,19 +1,7 @@
 # Joker Theme
 
-> A minimal theme for Emacs in terminal.
+> A simple dark theme for coding in the midnight.
 
-## Screenshot
+## screenshot
 
-![Screenshot](https://raw.githubusercontent.com/DogLooksGood/joker-theme/master/screenshot.png)
-
-## Minimal highlight
-
-This theme almost follows the principle of
-[Alabaster](https://github.com/tonsky/vscode-theme-alabaster),
-so it only have highlight on following syntax:
-
-1. String
-2. Function Name
-3. Comment
-4. Constant
-
+![screenshot](https://user-images.githubusercontent.com/11796018/104699951-6f38ef80-574e-11eb-921b-5b7573ebda02.png)
