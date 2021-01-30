@@ -1,5 +1,4 @@
-;;; joker-theme.el --- A minimal dark theme
-;;; -*- lexical-binding: t -*-
+;;; joker-theme.el --- A minimal dark theme  -*- lexical-binding: t; -*-
 
 ;; Author: Shi Tianshu
 ;; Keywords: theme
