@@ -3,8 +3,8 @@
 
 ;; Author: Shi Tianshu
 ;; Keywords: theme
-;; Package-Requires: ((emacs "26.3"))
-;; Version: 1.0.1
+;; Package-Requires: ((emacs "28.0.50"))
+;; Version: 1.0.2
 
 ;;
 ;; This file is not part of GNU Emacs.
@@ -27,148 +27,225 @@
 
 ;;; Commentary:
 
-;;; TODO
+;;; This is a minimal dark theme.
 
 ;;; Code:
 
-(deftheme joker "A simple medium contrast dark theme.")
+(deftheme joker "A minimal dark theme.")
 
-(custom-theme-set-faces
- `joker
- `(default                        ((((type tty)))
-                                   (((type graphic))
-                                    :background "#171717"
-                                    :foreground "#AFAFAF")))
- `(mc/cursor-face                 ((t (:background "#949494" :foreground "black"))))
- `(cursor                         ((t (:background "white"))))
- `(region                         ((t (:background "#173525"))))
- `(highlight-symbol-face          ((t ())))
- `(hl-line                        ((((type graphic)) :background "#303030")
-                                   (((type tty)))))
- '(fringe                         ((t ())))
- `(yascroll:thumb-fringe          ((t (:background "#3F3F3F" :foreground "#3F3F3F"))))
- `(yascroll:thumb-text-area       ((t (:background "#3F3F3F" :foreground "#3F3F3F"))))
- `(window-divider                 ((t (:foreground "#606060"))))
- `(show-paren-match               ((t (:underline "#00AF5F"))))
- `(company-tooltip-common         ((t ())))
- `(company-tooltip-common-selection ((t (:inherit font-lock-constant-face :inverse-video t))))
- `(company-tooltip                ((t (:background "#333333"))))
- `(company-tooltip-selection      ((t (:inherit font-lock-constant-face :inverse-video t))))
- `(company-tooltip-annotation     ((t (:inherit font-lock-comment-face))))
- `(company-scrollbar-bg           ((t (:background "#303030"))))
- `(company-scrollbar-fg           ((t (:background "#4E4E4E"))))
- `(font-lock-comment-face         ((t (:foreground "#00AAAA" :italic t))))
- `(font-lock-string-face          ((t (:foreground "#E24C49"))))
- `(font-lock-doc-face             ((t (:foreground "#00AAAA" :italic t))))
- `(font-lock-builtin-face         ((t ())))
- `(font-lock-type-face            ((t ())))
- `(font-lock-variable-name-face   ((t ())))
- `(font-lock-keyword-face         ((t (:foreground "#CFA300"))))
- `(font-lock-constant-face        ((t (:foreground "#b762de"))))
- `(font-lock-function-name-face   ((t (:bold t))))
- `(font-lock-warning-face         ((t (:foreground "yellow"))))
- `(font-lock-preprocessor-face    ((t (:inherit font-lock-constant-face))))
- `(button                         ((t (:foreground "#2299CC" :underline t))))
- `(meow-keypad-indicator          ((t (:foreground "black" :background "#EE4F4F"))))
- `(meow-insert-indicator          ((t (:foreground "black" :background "#00D787"))))
- `(meow-normal-indicator          ((t (:foreground "black" :background "#CFA300"))))
- `(meow-motion-indicator          ((t (:foreground "black" :background "#00AFD7"))))
- '(meow-keypad-cursor             ((t (:background "#c33"))))
- '(meow-insert-cursor             ((t (:background "#0f3"))))
- '(meow-normal-cursor             ((t (:background "#dc0"))))
- '(meow-motion-cursor             ((t (:background "#39f"))))
- `(cider-result-overlay-face      ((t (:background "black"))))
- `(mode-line                      ((t (:background "#131313"))))
- `(mode-line-inactive             ((t (:background "#1F1F1F"))))
- `(clojure-character-face         ((t (:inherit font-lock-constant-face))))
- `(highlight                      ((t (:underline "#00BBBB"))))
- `(isearch                        ((t (:background "#009F2F" :foreground "black"))))
- `(isearch-fail                   ((t (:backgronud "#D75FFF" :foreground "#606060"))))
- `(popup-isearch-match            ((t (:background "#CFA300" :foreground "black"))))
- `(ivy-highlight-face             ((t ())))
- `(ivy-yanked-word                ((t (:background "yellow" :foreground "black"))))
- `(ivy-remote                     ((t ())))
- `(counsel-outline-default        ((t ())))
- `(completions-common-part        ((t ())))
- `(minibuffer-prompt              ((t ())))
- `(lazy-highlight                 ((t (:foreground "white"))))
- `(magit-diff-file-heading-highlight ((t (:background "#171730"))))
- `(magit-section-highlight           ((t (:background "#171730"))))
- `(magit-diff-removed             ((t (:inherit font-lock-string-face))))
- `(magit-diff-added               ((t (:inherit font-lock-comment-face))))
- `(magit-diff-removed-highlight   ((t (:inherit font-lock-string-face :background "#303030"))))
- `(magit-diff-added-highlight     ((t (:inherit font-lock-comment-face :background "#303030"))))
- `(magit-diff-highlight           ((t (:background "#303030"))))
- `(magit-diff-context-highlight   ((t (:background "#303030"))))
- `(diff-hl-insert                 ((t (:foreground "green3" :inherit diff-added))))
- `(diff-hl-change                 ((t (:foreground "#6699FF" :background "#333399"))))
- `(diff-hl-change                 ((t (:foreground "#6699FF" :inherit diff-changed))))
- `(swiper-background-match-face-1 ((t (:inherit hl-line))))
- `(swiper-background-match-face-2 ((t (:inherit hl-line))))
- `(swiper-background-match-face-3 ((t (:inherit hl-line))))
- `(swiper-background-match-face-4 ((t (:inherit hl-line))))
- `(solaire-default-face           ((t (:background "#262626"))))
- `(compilation-info               ((t (:inherit font-lock-function-name-face))))
- `(match                          ((t (:inherit font-lock-doc-face))))
- `(swiper-match-face-1            ((t (:foreground "white"))))
- `(swiper-match-face-2            ((t (:foreground "white"))))
- `(swiper-match-face-3            ((t (:foreground "white"))))
- `(swiper-match-face-4            ((t (:foreground "white"))))
- `(ivy-current-match              ((t (:inherit font-lock-string-face))))
- `(ivy-minibuffer-match-highlight ((t (:foreground "#00D7D7"))))
- `(ivy-minibuffer-match-face-1    ((t ())))
- `(ivy-minibuffer-match-face-2    ((t ())))
- `(ivy-minibuffer-match-face-3    ((t ())))
- `(ivy-minibuffer-match-face-4    ((t ())))
- `(yas-field-highlight-face       ((t (:background "#350035"))))
- `(company-template-field         ((t (:inherit yas-field-highlight-face))))
- `(org-document-title             ((t (:inherit font-lock-string-face))))
- `(org-code                       ((t (:inherit font-lock-constant-face))))
- `(treemacs-root-face             ((t (:inherit font-lock-function-name-face :height 1.4 :underline t))))
- `(line-number                    ((t (:foreground "#353535" :inherit default))))
- `(line-number-current-line       ((((type tty)) :foreground "#D7AF00")
-                                   (((type graphic)) :inherit default  :foreground "#D7AF00" :background "#303030")))
- `(parenthesis                    ((t (:foreground "#909090"))))
- `(term-color-blue                ((t (:foreground "#3366FF" :background "#3366FF"))))
- `(popup-tip-face                 ((t (:background "#303030" :foreground "#C5C5C5"))))
- `(smerge-refined-added           ((t (:background "#253325"))))
- `(smerge-lower                   ((t (:background "#173017"))))
- `(telega-msg-heading             ((t (:inherit hl-line))))
- `(telega-unmuted-count           ((t (:inherit font-lock-function-name-face))))
- `(rime-preedit-face              ((t (:inverse-video t :underline t))))
- `(rime-cursor-face               ((t (:inherit font-lock-constant-face))))
- `(rime-indicator-face            ((t (:foreground "#9256B4"))))
- `(rime-indicator-dim-face        ((t (:foreground "grey40"))))
- `(tooltip                        ((t ())))
- `(parinfer-error-face            ((t (:underline (:style wave :color "red")))))
- '(dired-directory                ((t (:inherit font-lock-keyword-face))))
- '(web-mode-html-attr-name-face   ((t ())))
- '(web-mode-html-tag-face         ((t ())))
- '(imenu-list-entry-face-0        ((t ())))
- '(imenu-list-entry-subalist-face-0 ((t (:bold t :underline t))))
- '(vertical-border                ((t (:inherit default))))
- '(window-divider                 ((t ())))
- '(web-mode-function-call-face    ((t ())))
- '(web-mode-function-name-face    ((t ())))
- '(web-mode-html-tag-bracket-face ((t (:inherit parenthesis))))
- '(web-mode-symbol-face           ((t (:inherit font-lock-constant-face))))
- '(css-selector                   ((t (:inherit font-lock-constant-face))))
- '(markdown-header-face-1         ((t (:bold t :height 2.2))))
- '(markdown-header-face-2         ((t (:bold t :height 1.8))))
- '(markdown-header-face-3         ((t (:bold t :height 1.4))))
- '(markdown-header-face-4         ((t (:bold t :height 1.2))))
- '(markdown-header-face-5         ((t (:bold t :height 1.2))))
- '(markdown-header-face-6         ((t (:bold t :height 1.2))))
- '(markdown-header-face-7         ((t (:bold t :height 1.2))))
- '(telega-entity-type-code        ((t (:inherit font-lock-string-face))))
- '(org-table           ((t (:foreground "grey80"))))
- '(org-level-1         ((t (:bold t :height 2.2))))
- '(org-level-2         ((t (:bold t :height 1.8))))
- '(org-level-3         ((t (:bold t :height 1.4))))
- '(org-level-4         ((t (:bold t :height 1.2))))
- '(org-level-5         ((t (:bold t :height 1.2))))
- '(org-level-6         ((t (:bold t :height 1.2))))
- '(org-level-7         ((t (:bold t :height 1.2)))))
+(defvar joker-use-italic t
+  "Non-nil means use italic for comment and docstring.")
+
+(defvar joker-header-scales '(2.2 1.8 1.6 1.4 1.2 1.2 1.2)
+  "Scales for headers.")
+
+(let ((fg "#AFAFAF")
+      (fg+1 "#CCCCCC")
+      (fg-1 "#909090")
+      (bg "#171717")
+      (bg-1 "#131313")
+      (bg+1 "#242424")
+      (bg+2 "#303030")
+      (bg+3 "#404040")
+      (bg+4 "#505050")
+      (white "#E0E0E0")
+      (italic joker-use-italic)
+      (yellow "#CFA300")
+      (red "#E24C49")
+      (blue "#00AAAA")
+      (green "#2BEF93")
+      (purple "#b762de")
+      (orange "#FC9F4E")
+      (region "#173525")
+      (region2 "#350035"))
+  (custom-theme-set-faces
+   `joker
+   ;; We don't specify default foreground/background in TTY.
+   `(default                        ((((type tty)))
+                                     (((type graphic))
+                                      :background ,bg
+                                      :foreground ,fg)))
+   ;; Basics
+
+   `(cursor                         ((t (:background ,white))))
+   `(region                         ((t (:background ,region))))
+   `(hl-line                        ((((type graphic)) :background ,bg+1)
+                                     (((type tty)))))
+   `(fringe                         ((t (:background ,bg+2))))
+   `(window-divider                 ((t (:foreground ,bg+4))))
+   `(show-paren-match               ((t (:box (:color ,green :line-width (-1 . -1))))))
+   `(highlight                      ((t (:underline ,green))))
+   `(button                         ((t (:foreground "#2299CC" :underline t))))
+   '(vertical-border                ((t (:inherit default))))
+   '(window-divider                 ((t ())))
+   `(line-number                    ((t (:foreground ,bg+3 :inherit default))))
+   `(line-number-current-line       ((((type tty)) :foreground ,yellow)
+                                     (((type graphic)) :inherit default :foreground ,yellow :background ,bg+1)))
+   `(parenthesis                    ((t (:foreground ,fg-1))))
+   `(completions-common-part        ((t ())))
+   `(minibuffer-prompt              ((t ())))
+   `(lazy-highlight                 ((t (:foreground "white"))))
+   `(compilation-info               ((t (:inherit font-lock-function-name-face))))
+   `(match                          ((t (:inherit font-lock-doc-face))))
+
+
+   ;; ISearch
+   `(isearch                        ((t (:background ,green :foreground "black"))))
+   `(isearch-fail                   ((t (:backgronud ,red :foreground "black"))))
+
+   ;; Font Locks
+   `(font-lock-comment-face         ((t (:foreground ,blue :italic ,italic))))
+   `(font-lock-comment-delimiter-face         ((t (:foreground ,blue :italic ,italic))))
+   `(font-lock-string-face          ((t (:foreground ,red))))
+   `(font-lock-doc-face             ((t (:foreground ,blue :italic ,italic))))
+   `(font-lock-builtin-face         ((t ())))
+   `(font-lock-type-face            ((t ())))
+   `(font-lock-variable-name-face   ((t ())))
+   `(font-lock-keyword-face         ((t (:foreground ,yellow))))
+   `(font-lock-constant-face        ((t (:foreground ,purple))))
+   `(font-lock-function-name-face   ((t (:bold t))))
+   `(font-lock-warning-face         ((t (:foreground ,orange))))
+   `(font-lock-preprocessor-face    ((t (:inherit font-lock-constant-face))))
+
+   ;; IMenu
+   '(imenu-list-entry-face-0          ((t ())))
+   '(imenu-list-entry-subalist-face-0 ((t (:bold t))))
+
+   ;; Mode Line
+   `(mode-line                      ((t (:background ,bg-1))))
+   `(mode-line-inactive             ((t (:background ,bg+1))))
+
+
+   ;; Yascroll
+   `(yascroll:thumb-fringe          ((t (:background ,bg+2 :foreground ,bg+2))))
+   `(yascroll:thumb-text-area       ((t (:background ,bg+2 :foreground ,bg+2))))
+
+   ;; Company
+   `(company-tooltip-common         ((t (:bold t))))
+   `(company-tooltip-common-selection ((t (:bold t))))
+   `(company-tooltip                ((t (:background ,bg+2))))
+   `(company-tooltip-selection      ((t (:inverse-video t))))
+   `(company-tooltip-annotation     ((t (:foreground ,blue))))
+   `(company-scrollbar-bg           ((t (:background ,bg+2 :height 0.3))))
+   `(company-scrollbar-fg           ((t (:background ,bg+4 :height 0.3))))
+   `(company-template-field         ((t (:inherit yas-field-highlight-face))))
+
+   ;; Yasnippet
+   `(yas-field-highlight-face       ((t (:background ,region2))))
+
+   ;; Meow
+   `(meow-keypad-indicator          ((t (:foreground "black" :background ,red))))
+   `(meow-insert-indicator          ((t (:foreground "black" :background ,green))))
+   `(meow-normal-indicator          ((t (:foreground "black" :background ,yellow))))
+   `(meow-motion-indicator          ((t (:foreground "black" :background ,blue))))
+   '(meow-keypad-cursor             ((t ())))
+   '(meow-insert-cursor             ((t ())))
+   '(meow-normal-cursor             ((t ())))
+   '(meow-motion-cursor             ((t ())))
+   `(meow-grab                      ((t (:background ,region2))))
+
+   ;; Cider
+   ;;
+   `(cider-result-overlay-face      ((t (:background "black"))))
+
+   ;; Clojure
+   ;;
+   `(clojure-character-face         ((t (:inherit ,purple))))
+
+   ;; Ivy
+   `(ivy-highlight-face             ((t ())))
+   `(ivy-yanked-word                ((t (:background "yellow" :foreground "black"))))
+   `(ivy-remote                     ((t ())))
+   `(ivy-current-match              ((t (:inverse-video t))))
+   `(ivy-minibuffer-match-highlight ((t ())))
+   `(ivy-minibuffer-match-face-1    ((t ())))
+   `(ivy-minibuffer-match-face-2    ((t ())))
+   `(ivy-minibuffer-match-face-3    ((t ())))
+   `(ivy-minibuffer-match-face-4    ((t ())))
+   `(counsel-outline-default        ((t ())))
+   `(swiper-background-match-face-1 ((t (:inherit hl-line))))
+   `(swiper-background-match-face-2 ((t (:inherit hl-line))))
+   `(swiper-background-match-face-3 ((t (:inherit hl-line))))
+   `(swiper-background-match-face-4 ((t (:inherit hl-line))))
+   `(swiper-match-face-1            ((t (:foreground "white"))))
+   `(swiper-match-face-2            ((t (:foreground "white"))))
+   `(swiper-match-face-3            ((t (:foreground "white"))))
+   `(swiper-match-face-4            ((t (:foreground "white"))))
+
+   ;; Magit
+   `(magit-diff-file-heading-highlight ((t (:background ,bg+1))))
+   `(magit-section-highlight           ((t (:background ,bg+1))))
+   `(magit-diff-removed             ((t (:inherit font-lock-string-face))))
+   `(magit-diff-added               ((t (:inherit font-lock-comment-face))))
+   `(magit-diff-removed-highlight   ((t (:inherit font-lock-string-face :background ,bg+2))))
+   `(magit-diff-added-highlight     ((t (:inherit font-lock-comment-face :background ,bg+2))))
+   `(magit-diff-highlight           ((t (:background ,bg+1))))
+   `(magit-diff-context-highlight   ((t (:background ,bg+1))))
+
+   ;; SMerge
+   `(smerge-refined-added           ((t (:background "#253325"))))
+   `(smerge-lower                   ((t (:background "#173017"))))
+
+   ;; Diff-hl
+   `(diff-hl-insert                 ((t (:foreground ,green))))
+   `(diff-hl-change                 ((t (:foreground ,blue))))
+   `(diff-hl-delete                 ((t (:foreground ,red))))
+
+   ;; Term
+   `(term-color-blue                ((t (:foreground ,blue :background ,blue))))
+   `(term-color-green               ((t (:foreground ,green :background ,green))))
+   `(term-color-red                 ((t (:foreground ,red :background ,red))))
+
+   ;; Popup
+   `(popup-tip-face                 ((t (:background ,bg+4 :foreground ,fg))))
+   `(popup-isearch-match            ((t (:background "#CFA300" :foreground "black"))))
+
+   `(tooltip                        ((t ())))
+   '(dired-directory                ((t (:inherit ,yellow))))
+   '(web-mode-html-attr-name-face   ((t ())))
+   '(web-mode-html-tag-face         ((t ())))
+
+   ;; Emacs Rime
+   `(rime-preedit-face              ((t (:underline ,blue :background ,bg+2))))
+   `(rime-cursor-face               ((t (:inherit font-lock-constant-face))))
+   `(rime-indicator-face            ((t (:foreground ,purple))))
+   `(rime-indicator-dim-face        ((t (:foreground ,bg+4))))
+
+   ;; Web Mode
+   '(web-mode-function-call-face    ((t ())))
+   '(web-mode-function-name-face    ((t ())))
+   '(web-mode-html-tag-bracket-face ((t (:inherit parenthesis))))
+   '(web-mode-symbol-face           ((t (:inherit ,purple))))
+   '(css-selector                   ((t (:inherit ,purple))))
+
+   ;; Markdown
+   `(markdown-header-face-1         ((t (:bold t :height ,(nth 0 joker-header-scales)))))
+   `(markdown-header-face-2         ((t (:bold t :height ,(nth 1 joker-header-scales)))))
+   `(markdown-header-face-3         ((t (:bold t :height ,(nth 2 joker-header-scales)))))
+   `(markdown-header-face-4         ((t (:bold t :height ,(nth 3 joker-header-scales)))))
+   `(markdown-header-face-5         ((t (:bold t :height ,(nth 4 joker-header-scales)))))
+   `(markdown-header-face-6         ((t (:bold t :height ,(nth 5 joker-header-scales)))))
+   `(markdown-header-face-7         ((t (:bold t :height ,(nth 6 joker-header-scales)))))
+
+   ;; Telega
+   '(telega-entity-type-code        ((t (:inherit font-lock-string-face))))
+   `(telega-msg-heading             ((t (:inherit hl-line))))
+   `(telega-unmuted-count           ((t (:inherit font-lock-function-name-face))))
+
+   ;; Org-mode
+   `(org-table                      ((t (:foreground ,fg+1))))
+   `(org-level-1                    ((t (:bold t :height ,(nth 0 joker-header-scales)))))
+   `(org-level-2                    ((t (:bold t :height ,(nth 1 joker-header-scales)))))
+   `(org-level-3                    ((t (:bold t :height ,(nth 2 joker-header-scales)))))
+   `(org-level-4                    ((t (:bold t :height ,(nth 3 joker-header-scales)))))
+   `(org-level-5                    ((t (:bold t :height ,(nth 4 joker-header-scales)))))
+   `(org-level-6                    ((t (:bold t :height ,(nth 5 joker-header-scales)))))
+   `(org-level-7                    ((t (:bold t :height ,(nth 6 joker-header-scales)))))
+   `(org-document-title             ((t (:inherit font-lock-string-face))))
+   `(org-code                       ((t (:inherit font-lock-constant-face))))
+
+   ;; Treemacs
+   `(treemacs-root-face             ((t (:inherit font-lock-function-name-face :height 1.4 :underline t))))))
 
 (and load-file-name
      (boundp 'custom-theme-load-path)
