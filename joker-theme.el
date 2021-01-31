@@ -102,7 +102,7 @@
    `(font-lock-variable-name-face   ((t ())))
    `(font-lock-keyword-face         ((t (:foreground ,yellow))))
    `(font-lock-constant-face        ((t (:foreground ,purple))))
-   `(font-lock-function-name-face   ((t (:bold t))))
+   `(font-lock-function-name-face   ((t (:bold t :underline t))))
    `(font-lock-warning-face         ((t (:foreground ,orange))))
    `(font-lock-preprocessor-face    ((t (:inherit font-lock-constant-face))))
 
@@ -149,7 +149,7 @@
 
    ;; Clojure
    ;;
-   `(clojure-character-face         ((t (:inherit ,purple))))
+   `(clojure-character-face         ((t (:foreground ,purple))))
 
    ;; Ivy
    `(ivy-highlight-face             ((t ())))
@@ -200,7 +200,7 @@
    `(popup-isearch-match            ((t (:background "#CFA300" :foreground "black"))))
 
    `(tooltip                        ((t ())))
-   '(dired-directory                ((t (:inherit ,yellow))))
+   '(dired-directory                ((t (:foreground ,yellow))))
    '(web-mode-html-attr-name-face   ((t ())))
    '(web-mode-html-tag-face         ((t ())))
 
@@ -214,8 +214,8 @@
    '(web-mode-function-call-face    ((t ())))
    '(web-mode-function-name-face    ((t ())))
    '(web-mode-html-tag-bracket-face ((t (:inherit parenthesis))))
-   '(web-mode-symbol-face           ((t (:inherit ,purple))))
-   '(css-selector                   ((t (:inherit ,purple))))
+   '(web-mode-symbol-face           ((t (:foreground ,purple))))
+   '(css-selector                   ((t (:foreground ,purple))))
 
    ;; Markdown
    `(markdown-header-face-1         ((t (:bold t :height ,(nth 0 joker-header-scales)))))
