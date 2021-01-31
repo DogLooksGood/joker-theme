@@ -75,8 +75,8 @@
    `(show-paren-match               ((t (:box (:color ,green :line-width (-1 . -1))))))
    `(highlight                      ((t (:underline ,green))))
    `(button                         ((t (:foreground "#2299CC" :underline t))))
-   '(vertical-border                ((t (:inherit default))))
-   '(window-divider                 ((t ())))
+   `(vertical-border                ((t (:inherit default))))
+   `(window-divider                 ((t ())))
    `(line-number                    ((t (:foreground ,bg+3 :inherit default))))
    `(line-number-current-line       ((((type tty)) :foreground ,yellow)
                                      (((type graphic)) :inherit default :foreground ,yellow :background ,bg+1)))
@@ -107,8 +107,8 @@
    `(font-lock-preprocessor-face    ((t (:inherit font-lock-constant-face))))
 
    ;; IMenu
-   '(imenu-list-entry-face-0          ((t ())))
-   '(imenu-list-entry-subalist-face-0 ((t (:bold t))))
+   `(imenu-list-entry-face-0          ((t ())))
+   `(imenu-list-entry-subalist-face-0 ((t (:bold t))))
 
    ;; Mode Line
    `(mode-line                      ((t (:background ,bg-1))))
@@ -137,10 +137,10 @@
    `(meow-insert-indicator          ((t (:foreground "black" :background ,green))))
    `(meow-normal-indicator          ((t (:foreground "black" :background ,yellow))))
    `(meow-motion-indicator          ((t (:foreground "black" :background ,blue))))
-   '(meow-keypad-cursor             ((t ())))
-   '(meow-insert-cursor             ((t ())))
-   '(meow-normal-cursor             ((t ())))
-   '(meow-motion-cursor             ((t ())))
+   `(meow-keypad-cursor             ((t ())))
+   `(meow-insert-cursor             ((t ())))
+   `(meow-normal-cursor             ((t ())))
+   `(meow-motion-cursor             ((t ())))
    `(meow-grab                      ((t (:background ,region2))))
 
    ;; Cider
@@ -200,9 +200,9 @@
    `(popup-isearch-match            ((t (:background "#CFA300" :foreground "black"))))
 
    `(tooltip                        ((t ())))
-   '(dired-directory                ((t (:foreground ,yellow))))
-   '(web-mode-html-attr-name-face   ((t ())))
-   '(web-mode-html-tag-face         ((t ())))
+   `(dired-directory                ((t (:foreground ,yellow))))
+   `(web-mode-html-attr-name-face   ((t ())))
+   `(web-mode-html-tag-face         ((t ())))
 
    ;; Emacs Rime
    `(rime-preedit-face              ((t (:underline ,blue :background ,bg+2))))
@@ -211,11 +211,11 @@
    `(rime-indicator-dim-face        ((t (:foreground ,bg+4))))
 
    ;; Web Mode
-   '(web-mode-function-call-face    ((t ())))
-   '(web-mode-function-name-face    ((t ())))
-   '(web-mode-html-tag-bracket-face ((t (:inherit parenthesis))))
-   '(web-mode-symbol-face           ((t (:foreground ,purple))))
-   '(css-selector                   ((t (:foreground ,purple))))
+   `(web-mode-function-call-face    ((t ())))
+   `(web-mode-function-name-face    ((t ())))
+   `(web-mode-html-tag-bracket-face ((t (:inherit parenthesis))))
+   `(web-mode-symbol-face           ((t (:foreground ,purple))))
+   `(css-selector                   ((t (:foreground ,purple))))
 
    ;; Markdown
    `(markdown-header-face-1         ((t (:bold t :height ,(nth 0 joker-header-scales)))))
@@ -227,7 +227,7 @@
    `(markdown-header-face-7         ((t (:bold t :height ,(nth 6 joker-header-scales)))))
 
    ;; Telega
-   '(telega-entity-type-code        ((t (:inherit font-lock-string-face))))
+   `(telega-entity-type-code        ((t (:inherit font-lock-string-face))))
    `(telega-msg-heading             ((t (:inherit hl-line))))
    `(telega-unmuted-count           ((t (:inherit font-lock-function-name-face))))
 
