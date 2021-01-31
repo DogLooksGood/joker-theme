@@ -102,7 +102,7 @@
    `(font-lock-variable-name-face   ((t ())))
    `(font-lock-keyword-face         ((t (:foreground ,yellow))))
    `(font-lock-constant-face        ((t (:foreground ,purple))))
-   `(font-lock-function-name-face   ((t (:bold t :underline t))))
+   `(font-lock-function-name-face   ((t (:bold t))))
    `(font-lock-warning-face         ((t (:foreground ,orange))))
    `(font-lock-preprocessor-face    ((t (:inherit font-lock-constant-face))))
 
