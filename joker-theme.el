@@ -53,7 +53,8 @@
       (red "#E24C49")
       (blue "#00AAAA")
       (green "#2BEF93")
-      (purple "#b762de")
+      (purple "#B762DE")
+      (light-purple "#B28CE2")
       (orange "#FC9F4E")
       (region "#173525")
       (region2 "#350035"))
@@ -155,7 +156,7 @@
    `(ivy-highlight-face             ((t ())))
    `(ivy-yanked-word                ((t (:background "yellow" :foreground "black"))))
    `(ivy-remote                     ((t ())))
-   `(ivy-current-match              ((t (:inverse-video t))))
+   `(ivy-current-match              ((t (:foreground ,yellow :inverse-video t))))
    `(ivy-minibuffer-match-highlight ((t ())))
    `(ivy-minibuffer-match-face-1    ((t ())))
    `(ivy-minibuffer-match-face-2    ((t ())))
@@ -200,7 +201,7 @@
    `(popup-isearch-match            ((t (:background "#CFA300" :foreground "black"))))
 
    `(tooltip                        ((t ())))
-   `(dired-directory                ((t (:foreground ,yellow))))
+   `(dired-directory                ((t (:foreground ,light-purple))))
    `(web-mode-html-attr-name-face   ((t ())))
    `(web-mode-html-tag-face         ((t ())))
 
