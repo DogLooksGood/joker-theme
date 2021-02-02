@@ -32,11 +32,16 @@
 
 (deftheme joker "A minimal dark theme.")
 
-(defvar joker-use-italic t
+(defvar joker-theme-use-italic t
   "Non-nil means use italic for comment and docstring.")
 
-(defvar joker-header-scales '(2.2 1.8 1.6 1.4 1.2 1.2 1.2)
+(defvar joker-theme-header-scales '(2.2 1.8 1.6 1.4 1.2 1.2 1.2)
   "Scales for headers.")
+
+(defvar joker-theme-main-color "#00AAAA"
+  "The main color used for some places.
+
+You may want to set this to window's border color.")
 
 (let ((fg "#AFAFAF")
       (fg+1 "#CCCCCC")
@@ -48,7 +53,7 @@
       (bg+3 "#404040")
       (bg+4 "#505050")
       (white "#E0E0E0")
-      (italic joker-use-italic)
+      (italic joker-theme-use-italic)
       (yellow "#CFA300")
       (red "#E24C49")
       (blue "#00AAAA")
@@ -56,7 +61,8 @@
       (purple "#b762de")
       (orange "#FC9F4E")
       (region "#173525")
-      (region2 "#350035"))
+      (region2 "#350035")
+      (main joker-theme-main-color))
   (custom-theme-set-faces
    `joker
    ;; We don't specify default foreground/background in TTY.
@@ -72,7 +78,7 @@
                                      (((type tty)))))
    `(fringe                         ((t (:background ,bg+2))))
    `(window-divider                 ((t (:foreground ,bg+4))))
-   `(show-paren-match               ((t (:box (:color ,green :line-width (-1 . -1))))))
+   `(show-paren-match               ((t (:underline ,green))))
    `(highlight                      ((t (:underline ,green))))
    `(button                         ((t (:foreground "#2299CC" :underline t))))
    `(vertical-border                ((t (:inherit default))))
@@ -116,8 +122,8 @@
 
 
    ;; Yascroll
-   `(yascroll:thumb-fringe          ((t (:background ,bg+2 :foreground ,bg+2))))
-   `(yascroll:thumb-text-area       ((t (:background ,bg+2 :foreground ,bg+2))))
+   `(yascroll:thumb-fringe          ((t (:background ,main :foreground ,main))))
+   `(yascroll:thumb-text-area       ((t (:background ,main :foreground ,main))))
 
    ;; Company
    `(company-tooltip-common         ((t (:bold t))))
@@ -155,7 +161,7 @@
    `(ivy-highlight-face             ((t ())))
    `(ivy-yanked-word                ((t (:background "yellow" :foreground "black"))))
    `(ivy-remote                     ((t ())))
-   `(ivy-current-match              ((t (:inverse-video t))))
+   `(ivy-current-match              ((t (:foreground ,bg :background ,main))))
    `(ivy-minibuffer-match-highlight ((t ())))
    `(ivy-minibuffer-match-face-1    ((t ())))
    `(ivy-minibuffer-match-face-2    ((t ())))
@@ -218,13 +224,13 @@
    `(css-selector                   ((t (:foreground ,purple))))
 
    ;; Markdown
-   `(markdown-header-face-1         ((t (:bold t :height ,(nth 0 joker-header-scales)))))
-   `(markdown-header-face-2         ((t (:bold t :height ,(nth 1 joker-header-scales)))))
-   `(markdown-header-face-3         ((t (:bold t :height ,(nth 2 joker-header-scales)))))
-   `(markdown-header-face-4         ((t (:bold t :height ,(nth 3 joker-header-scales)))))
-   `(markdown-header-face-5         ((t (:bold t :height ,(nth 4 joker-header-scales)))))
-   `(markdown-header-face-6         ((t (:bold t :height ,(nth 5 joker-header-scales)))))
-   `(markdown-header-face-7         ((t (:bold t :height ,(nth 6 joker-header-scales)))))
+   `(markdown-header-face-1         ((t (:bold t :height ,(nth 0 joker-theme-header-scales)))))
+   `(markdown-header-face-2         ((t (:bold t :height ,(nth 1 joker-theme-header-scales)))))
+   `(markdown-header-face-3         ((t (:bold t :height ,(nth 2 joker-theme-header-scales)))))
+   `(markdown-header-face-4         ((t (:bold t :height ,(nth 3 joker-theme-header-scales)))))
+   `(markdown-header-face-5         ((t (:bold t :height ,(nth 4 joker-theme-header-scales)))))
+   `(markdown-header-face-6         ((t (:bold t :height ,(nth 5 joker-theme-header-scales)))))
+   `(markdown-header-face-7         ((t (:bold t :height ,(nth 6 joker-theme-header-scales)))))
 
    ;; Telega
    `(telega-entity-type-code        ((t (:inherit font-lock-string-face))))
@@ -233,13 +239,13 @@
 
    ;; Org-mode
    `(org-table                      ((t (:foreground ,fg+1))))
-   `(org-level-1                    ((t (:bold t :height ,(nth 0 joker-header-scales)))))
-   `(org-level-2                    ((t (:bold t :height ,(nth 1 joker-header-scales)))))
-   `(org-level-3                    ((t (:bold t :height ,(nth 2 joker-header-scales)))))
-   `(org-level-4                    ((t (:bold t :height ,(nth 3 joker-header-scales)))))
-   `(org-level-5                    ((t (:bold t :height ,(nth 4 joker-header-scales)))))
-   `(org-level-6                    ((t (:bold t :height ,(nth 5 joker-header-scales)))))
-   `(org-level-7                    ((t (:bold t :height ,(nth 6 joker-header-scales)))))
+   `(org-level-1                    ((t (:bold t :height ,(nth 0 joker-theme-header-scales)))))
+   `(org-level-2                    ((t (:bold t :height ,(nth 1 joker-theme-header-scales)))))
+   `(org-level-3                    ((t (:bold t :height ,(nth 2 joker-theme-header-scales)))))
+   `(org-level-4                    ((t (:bold t :height ,(nth 3 joker-theme-header-scales)))))
+   `(org-level-5                    ((t (:bold t :height ,(nth 4 joker-theme-header-scales)))))
+   `(org-level-6                    ((t (:bold t :height ,(nth 5 joker-theme-header-scales)))))
+   `(org-level-7                    ((t (:bold t :height ,(nth 6 joker-theme-header-scales)))))
    `(org-document-title             ((t (:inherit font-lock-string-face))))
    `(org-code                       ((t (:inherit font-lock-constant-face))))
 
