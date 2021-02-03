@@ -153,6 +153,8 @@ You may want to set this to window's border color.")
    ;; Cider
    ;;
    `(cider-result-overlay-face      ((t (:background "black"))))
+   `(cider-repl-stderr-face         ((t (:foreground ,blue))))
+   `(cider-repl-stdout-face         ((t (:foreground ,fg-1))))
 
    ;; Clojure
    ;;
