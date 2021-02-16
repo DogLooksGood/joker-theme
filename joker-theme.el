@@ -92,6 +92,8 @@ You may want to set this to window's border color.")
    `(minibuffer-prompt              ((t ())))
    `(lazy-highlight                 ((t (:background ,bg+2))))
    `(compilation-info               ((t (:inherit font-lock-function-name-face))))
+   `(compilation-warning            ((t (:inherit font-lock-warning-face))))
+   `(warning                        ((t (:inherit font-lock-warning-face))))
    `(match                          ((t (:background ,bg+2))))
 
 
@@ -179,6 +181,9 @@ You may want to set this to window's border color.")
    `(swiper-match-face-2            ((t (:foreground "white"))))
    `(swiper-match-face-3            ((t (:foreground "white"))))
    `(swiper-match-face-4            ((t (:foreground "white"))))
+
+   ;; Selectrum
+   `(selectrum-current-candidate    ((t (:foreground ,main :inverse-video t))))
 
    ;; Magit
    `(magit-diff-file-heading-highlight ((t (:background ,bg+1))))
