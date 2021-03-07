@@ -97,7 +97,7 @@ You may want to set this to window's border color.")
    `(compilation-warning            ((t (:inherit font-lock-warning-face))))
    `(warning                        ((t (:inherit font-lock-warning-face))))
    `(match                          ((t (:background ,bg+2))))
-
+   `(secondary-selection            ((t (:background ,region2 :extend t))))
 
    ;; ISearch
    `(isearch                        ((t (:background ,green :foreground "black"))))
@@ -152,7 +152,6 @@ You may want to set this to window's border color.")
    `(meow-insert-cursor             ((t ())))
    `(meow-normal-cursor             ((t ())))
    `(meow-motion-cursor             ((t ())))
-   `(meow-grab                      ((t (:background ,region2))))
 
    ;; Cider
    ;;
